@@ -1,0 +1,30 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{{title}}</title>
+		<link rel="icon" href="./img/index.png" />
+		<link rel="stylesheet" href="./css/style.css" />
+
+	</head>
+	<body>
+		<div class="main-content">
+			<b>{{heading}}
+			</b>
+			<p id="msg">
+
+			</p>
+
+		</div>
+		<script>
+			let obj =
+			{{{obj}}}; let text = "<table cellpadding='2' border='0'>";
+			Object.entries(obj).map((item)=>{
+			text+='<tr><td>'+item[0]+item[1].desc+'</td><tr><td>'+item[1].value+'</td></tr>'; });
+			text+='</table>'; document.querySelector("p").innerHTML =text;
+
+		</script>
+
+	</body>
+</html>
